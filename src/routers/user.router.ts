@@ -10,3 +10,4 @@ router.delete("/:id", userController.deleteById)
 router.put("/:id", userController.updateById)
 
 export const userRouter = router
+
