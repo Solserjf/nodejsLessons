@@ -1,21 +1,21 @@
-import {IUser, IUserDTO} from "../interfaces/user.interface";
-import {User} from "../models/user.models";
+import { IUser, IUserDTO } from "../interfaces/user.interface";
+import { User } from "../models/user.models";
 
-class UserRepository{
-    public getAll():Promise<IUser[]>{
-        return User.find()
+class UserRepository {
+    public getAll(): Promise<IUser[]> {
+        return User.find();
     }
-    public create(user:IUserDTO):Promise<IUser>{
-        return User.create(user)
+    public create(user: IUserDTO): Promise<IUser> {
+        return User.create(user);
     }
-    public getById(userId:string):Promise<IUser>{
-        return User.findById(userId)
+    public getById(userId: string): Promise<IUser> {
+        return User.findById(userId);
     }
-    public updateById(userId:string,user:IUserDTO):Promise<IUser>{
-        return User.findByIdAndUpdate(userId, user)
+    public updateById(userId: string, user: IUserDTO): Promise<IUser> {
+        return User.findByIdAndUpdate(userId, user);
     }
-    public deleteById(userId:string):Promise<IUser>{
-        return User.findByIdAndDelete(userId)
+    public deleteById(userId: string): Promise<IUser> {
+        return User.findByIdAndDelete(userId);
     }
 }
 
